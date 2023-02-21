@@ -5,11 +5,14 @@ namespace Modelo
 	class Prenda
 	{
 	protected:
-		float precio;
+		float precioUnitario;
+		enum class Calidad {standard, premium} calidad;
+		int cantidadUnidadesEnStock;
 	public:
-		Prenda(float);
+		Prenda(float, Calidad, int);
 		virtual ~Prenda();
 		float getPrecio();
+		Calidad getCalidad();
 	};
 }
 

@@ -1,6 +1,6 @@
 ﻿  Cotizacion.cpp
-  Fecha.cpp
-  Hora.cpp
+  Prenda.cpp
+  Tienda.cpp
   Vendedor.cpp
   Generating Code...
   FinalCPPQuarkDartsch.vcxproj -> C:\Users\choco\Desktop\FinalCPPQuarkDartsch\FinalCPPQuarkDartsch\x64\Debug\FinalCPPQuarkDartsch.exe

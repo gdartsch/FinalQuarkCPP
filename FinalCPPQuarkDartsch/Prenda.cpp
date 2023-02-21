@@ -2,9 +2,11 @@
 
 namespace Modelo
 {
-	Prenda::Prenda(float precio) 
+	Prenda::Prenda(float precioUnitario, Calidad calidad, int cantidadUnidadesEnStock)
 	{
-		this->precio = precio;
+		this->precioUnitario = precioUnitario;
+		this->calidad = calidad;
+		this->cantidadUnidadesEnStock = cantidadUnidadesEnStock;
 	}
 
 	Prenda::~Prenda()
@@ -14,6 +16,11 @@ namespace Modelo
 
 	float Prenda::getPrecio()
 	{
-		return precio;
+		return precioUnitario;
+	}
+
+	Prenda::Calidad Prenda::getCalidad()
+	{
+		return calidad;
 	}
 }

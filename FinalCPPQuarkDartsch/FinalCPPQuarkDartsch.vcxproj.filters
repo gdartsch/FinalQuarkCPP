@@ -39,6 +39,9 @@
     <ClCompile Include="Prenda.cpp">
       <Filter>Source Files\Modelo</Filter>
     </ClCompile>
+    <ClCompile Include="Tienda.cpp">
+      <Filter>Source Files\Modelo</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cotizacion.h">
@@ -54,6 +57,9 @@
       <Filter>Header Files\Modelo</Filter>
     </ClInclude>
     <ClInclude Include="Prenda.h">
+      <Filter>Header Files\Modelo</Filter>
+    </ClInclude>
+    <ClInclude Include="Tienda.h">
       <Filter>Header Files\Modelo</Filter>
     </ClInclude>
   </ItemGroup>
