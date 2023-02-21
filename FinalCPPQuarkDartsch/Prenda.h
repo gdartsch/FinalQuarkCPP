@@ -11,7 +11,7 @@ namespace Modelo
 	public:
 		Prenda(float, Calidad, int);
 		virtual ~Prenda();
-		float getPrecio();
+		virtual float getPrecio();
 		Calidad getCalidad();
 	};
 }

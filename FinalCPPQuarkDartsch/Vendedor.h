@@ -6,6 +6,7 @@
 #include "Hora.h"
 #include "Fecha.h"
 #include "Prenda.h"
+#include "Tienda.h"
 
 using namespace std;
 
@@ -15,6 +16,7 @@ namespace Modelo
 	class Fecha;
 	class Hora;
 	class Prenda;
+	class Tienda;
 
 	class Vendedor
 	{
@@ -23,8 +25,9 @@ namespace Modelo
 		 string apellido;
 		 int codigoDeVendedor;
 		 vector<Cotizacion> cotizaciones;
+		 Tienda* tienda;
 	public:
-		Vendedor(string, string, int);
+		Vendedor(string, string, int, Tienda*);
 		virtual ~Vendedor();
 		string getNombre();
 		string getApellido();

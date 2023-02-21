@@ -2,11 +2,12 @@
 
 namespace Modelo
 {
-	Vendedor::Vendedor(string nombre, string apellido, int codigoDeVendedor)
+	Vendedor::Vendedor(string nombre, string apellido, int codigoDeVendedor, Tienda* tienda)
 	{
 		this->nombre = nombre;
 		this->apellido = apellido;
 		this->codigoDeVendedor = codigoDeVendedor;
+		this->tienda = tienda;
 	}
 
 	Vendedor::~Vendedor() 
