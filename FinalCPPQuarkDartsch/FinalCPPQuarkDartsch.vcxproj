@@ -139,7 +139,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Cotizacion.cpp" />
+    <ClCompile Include="Fecha.cpp" />
     <ClCompile Include="FinalCPPQuarkDartsch.cpp" />
+    <ClCompile Include="Hora.cpp" />
+    <ClCompile Include="Prenda.cpp" />
+    <ClCompile Include="Vendedor.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Cotizacion.h" />
+    <ClInclude Include="Fecha.h" />
+    <ClInclude Include="Hora.h" />
+    <ClInclude Include="Prenda.h" />
+    <ClInclude Include="Vendedor.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

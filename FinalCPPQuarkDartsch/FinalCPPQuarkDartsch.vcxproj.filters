@@ -16,10 +16,45 @@
     <Filter Include="Source Files\Modelo">
       <UniqueIdentifier>{6e5b167e-3f4a-48ba-b9a5-92a677c7f868}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Modelo">
+      <UniqueIdentifier>{ec1781fe-f98f-4fc6-990b-f99685bc1194}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FinalCPPQuarkDartsch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Vendedor.cpp">
+      <Filter>Source Files\Modelo</Filter>
+    </ClCompile>
+    <ClCompile Include="Cotizacion.cpp">
+      <Filter>Source Files\Modelo</Filter>
+    </ClCompile>
+    <ClCompile Include="Hora.cpp">
+      <Filter>Source Files\Modelo</Filter>
+    </ClCompile>
+    <ClCompile Include="Fecha.cpp">
+      <Filter>Source Files\Modelo</Filter>
+    </ClCompile>
+    <ClCompile Include="Prenda.cpp">
+      <Filter>Source Files\Modelo</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Cotizacion.h">
+      <Filter>Header Files\Modelo</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendedor.h">
+      <Filter>Header Files\Modelo</Filter>
+    </ClInclude>
+    <ClInclude Include="Hora.h">
+      <Filter>Header Files\Modelo</Filter>
+    </ClInclude>
+    <ClInclude Include="Fecha.h">
+      <Filter>Header Files\Modelo</Filter>
+    </ClInclude>
+    <ClInclude Include="Prenda.h">
+      <Filter>Header Files\Modelo</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
