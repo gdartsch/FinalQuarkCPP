@@ -1,4 +1,6 @@
 #include "Prenda.h"
+#include <string>
+using namespace std;
 
 namespace Modelo
 {
@@ -19,8 +21,18 @@ namespace Modelo
 		return precioUnitario;
 	}
 
-	Prenda::Calidad Prenda::getCalidad()
+	string Prenda::getCalidad()
 	{
-		return calidad;
+		return calidad == Calidad::premium ? "premium" : "standard";
+	}
+
+	void Prenda::setPrecio(float nuevoPrecio)
+	{
+		this->precioUnitario = nuevoPrecio;
+	}
+
+	int Prenda::getStock()
+	{
+		return cantidadUnidadesEnStock;
 	}
 }

@@ -2,10 +2,17 @@
 //
 
 #include <iostream>
+#include "Presentador.h"
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    shared_ptr<Presentador::Presentador> presentador = make_shared<Presentador::Presentador>();
+    presentador.get()->setup();
+    
+    presentador.get()->mostrarDebug();
+
+    //std::cout << "Hello World!\n";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

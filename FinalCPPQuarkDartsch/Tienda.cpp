@@ -28,8 +28,28 @@ namespace Modelo
 		return prendas;
 	}
 
-	void Tienda::addPrenda(Prenda* prenda) 
+	void Tienda::addPrenda(shared_ptr <Prenda> prenda)
 	{
 		prendas.push_back(*prenda);
+	}
+
+	vector<Camisa> Tienda::getCamisas()
+	{
+		return camisas;
+	}
+
+	vector<Pantalon> Tienda::getPantalones()
+	{
+		return pantalones;
+	}
+
+	void Tienda::addCamisa(shared_ptr <Camisa> camisa)
+	{
+		camisas.push_back(*camisa);
+	}
+
+	void Tienda::addPantalon(shared_ptr <Pantalon> pantalon)
+	{
+		pantalones.push_back(*pantalon);
 	}
 }

@@ -2,7 +2,7 @@
 
 namespace Modelo
 {
-	Vendedor::Vendedor(string nombre, string apellido, int codigoDeVendedor, Tienda* tienda)
+	Vendedor::Vendedor(string nombre, string apellido, int codigoDeVendedor, shared_ptr<Tienda> tienda)
 	{
 		this->nombre = nombre;
 		this->apellido = apellido;
@@ -48,5 +48,10 @@ namespace Modelo
 												unidadesCotizadas);
 
 		cotizaciones.push_back(*nuevaCotizacion);
+	}
+
+	shared_ptr<Tienda> Vendedor::getTienda()
+	{
+		return tienda;
 	}
 }

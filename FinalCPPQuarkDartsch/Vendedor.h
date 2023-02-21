@@ -2,6 +2,7 @@
 
 #include <string>
 #include <vector>
+#include <memory>
 #include "Cotizacion.h"
 #include "Hora.h"
 #include "Fecha.h"
@@ -25,15 +26,17 @@ namespace Modelo
 		 string apellido;
 		 int codigoDeVendedor;
 		 vector<Cotizacion> cotizaciones;
-		 Tienda* tienda;
+		 //Tienda* tienda;
+		 shared_ptr<Tienda> tienda;
 	public:
-		Vendedor(string, string, int, Tienda*);
+		Vendedor(string, string, int, shared_ptr<Tienda>);
 		virtual ~Vendedor();
 		string getNombre();
 		string getApellido();
 		int getCodigoVendedor();
 		vector<Cotizacion> getCotizaciones();
 		void createCotizacion(int, Fecha*, Hora*, Prenda*, int);
+		shared_ptr<Tienda> getTienda();
 	};
 }
 

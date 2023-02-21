@@ -19,6 +19,12 @@
     <Filter Include="Header Files\Modelo">
       <UniqueIdentifier>{ec1781fe-f98f-4fc6-990b-f99685bc1194}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Presentador">
+      <UniqueIdentifier>{3b88525c-5e30-45e6-ad59-423fab5f4ef7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Presentador">
+      <UniqueIdentifier>{1c442bea-d0b6-472b-9d42-c0816c4f72e8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FinalCPPQuarkDartsch.cpp">
@@ -48,6 +54,9 @@
     <ClCompile Include="Camisa.cpp">
       <Filter>Source Files\Modelo</Filter>
     </ClCompile>
+    <ClCompile Include="Presentador.cpp">
+      <Filter>Source Files\Presentador</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cotizacion.h">
@@ -73,6 +82,9 @@
     </ClInclude>
     <ClInclude Include="Camisa.h">
       <Filter>Header Files\Modelo</Filter>
+    </ClInclude>
+    <ClInclude Include="Presentador.h">
+      <Filter>Header Files\Presentador</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

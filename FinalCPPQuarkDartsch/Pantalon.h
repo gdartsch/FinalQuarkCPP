@@ -6,12 +6,13 @@ namespace Modelo
 	class Pantalon :
 		public Prenda
 	{
-	private:
-		enum class Tipo { comun, chupin } tipo;
 	public:
+		enum class Tipo { comun, chupin } tipo;
 		Pantalon(float, Calidad, int, Tipo);
 		virtual ~Pantalon();
 		float getPrecio() override;
+		void setPrecio(float) override;
+		string getTipo();
 	};
 }
 

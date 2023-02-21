@@ -1,4 +1,7 @@
 #include "Pantalon.h"
+#include <string>
+
+using namespace std;
 
 namespace Modelo
 {
@@ -21,5 +24,17 @@ namespace Modelo
 	float Pantalon:: getPrecio()
 	{
 		return precioUnitario;
+	}
+
+	void Pantalon::setPrecio(float nuevoPrecio)
+	{
+		this->precioUnitario = nuevoPrecio;
+		this->precioUnitario = tipo == Pantalon::Tipo::comun ? precioUnitario : precioUnitario - (precioUnitario * 0.12f);
+		this->precioUnitario = calidad == Prenda::Calidad::standard ? precioUnitario : precioUnitario * 1.3f;
+	}
+
+	string Pantalon::getTipo()
+	{
+		return tipo == Tipo::chupin ? "chupin" : "comun";
 	}
 }
