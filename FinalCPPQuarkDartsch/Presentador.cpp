@@ -545,6 +545,7 @@ void Presentador::cotizarPantalon()
 
 void Presentador::mostrarCotizaciones()
 {
+	string output;
 	for (auto item : vendedor.get()->getCotizaciones())
 	{
 		string detalles;
