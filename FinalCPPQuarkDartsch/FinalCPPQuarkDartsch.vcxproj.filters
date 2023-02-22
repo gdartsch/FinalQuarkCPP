@@ -25,6 +25,12 @@
     <Filter Include="Header Files\Presentador">
       <UniqueIdentifier>{1c442bea-d0b6-472b-9d42-c0816c4f72e8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Vista">
+      <UniqueIdentifier>{905f2917-8189-4fea-9f69-3165c639d82c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Vista">
+      <UniqueIdentifier>{b9f60c88-1b61-4e7d-90ae-08b26c07f8d4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FinalCPPQuarkDartsch.cpp">
@@ -34,12 +40,6 @@
       <Filter>Source Files\Modelo</Filter>
     </ClCompile>
     <ClCompile Include="Cotizacion.cpp">
-      <Filter>Source Files\Modelo</Filter>
-    </ClCompile>
-    <ClCompile Include="Hora.cpp">
-      <Filter>Source Files\Modelo</Filter>
-    </ClCompile>
-    <ClCompile Include="Fecha.cpp">
       <Filter>Source Files\Modelo</Filter>
     </ClCompile>
     <ClCompile Include="Prenda.cpp">
@@ -57,18 +57,15 @@
     <ClCompile Include="Presentador.cpp">
       <Filter>Source Files\Presentador</Filter>
     </ClCompile>
+    <ClCompile Include="Vista.cpp">
+      <Filter>Source Files\Vista</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cotizacion.h">
       <Filter>Header Files\Modelo</Filter>
     </ClInclude>
     <ClInclude Include="Vendedor.h">
-      <Filter>Header Files\Modelo</Filter>
-    </ClInclude>
-    <ClInclude Include="Hora.h">
-      <Filter>Header Files\Modelo</Filter>
-    </ClInclude>
-    <ClInclude Include="Fecha.h">
       <Filter>Header Files\Modelo</Filter>
     </ClInclude>
     <ClInclude Include="Prenda.h">
@@ -85,6 +82,9 @@
     </ClInclude>
     <ClInclude Include="Presentador.h">
       <Filter>Header Files\Presentador</Filter>
+    </ClInclude>
+    <ClInclude Include="Vista.h">
+      <Filter>Header Files\Vista</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

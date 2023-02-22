@@ -1,4 +1,24 @@
-﻿  FinalCPPQuarkDartsch.cpp
+﻿  Camisa.cpp
+  FinalCPPQuarkDartsch.cpp
+  Prenda.cpp
   Presentador.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\xutility(149,77): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\memory(2003): message : see reference to function template instantiation 'void std::_Construct_in_place<_Ty,double&,Modelo::Prenda::Calidad&,int&,Modelo::Pantalon::Tipo&>(_Ty &,double &,Modelo::Prenda::Calidad &,int &,Modelo::Pantalon::Tipo &) noexcept(false)' being compiled
+          with
+          [
+              _Ty=Modelo::Pantalon
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\memory(2722): message : see reference to function template instantiation 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<double&,Modelo::Prenda::Calidad&,int&,Modelo::Pantalon::Tipo&>(double &,Modelo::Prenda::Calidad &,int &,Modelo::Pantalon::Tipo &)' being compiled
+          with
+          [
+              _Ty=Modelo::Pantalon
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\memory(2723): message : see reference to function template instantiation 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<double&,Modelo::Prenda::Calidad&,int&,Modelo::Pantalon::Tipo&>(double &,Modelo::Prenda::Calidad &,int &,Modelo::Pantalon::Tipo &)' being compiled
+          with
+          [
+              _Ty=Modelo::Pantalon
+          ]
+C:\Users\choco\Desktop\FinalCPPQuarkDartsch\FinalCPPQuarkDartsch\Presentador.cpp(519): message : see reference to function template instantiation 'std::shared_ptr<Modelo::Pantalon> std::make_shared<Modelo::Pantalon,double&,Modelo::Prenda::Calidad&,int&,Modelo::Pantalon::Tipo&>(double &,Modelo::Prenda::Calidad &,int &,Modelo::Pantalon::Tipo &)' being compiled
+  Vista.cpp
   Generating Code...
   FinalCPPQuarkDartsch.vcxproj -> C:\Users\choco\Desktop\FinalCPPQuarkDartsch\FinalCPPQuarkDartsch\x64\Debug\FinalCPPQuarkDartsch.exe

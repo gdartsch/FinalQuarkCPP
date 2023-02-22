@@ -2,38 +2,46 @@
 
 #include <string>
 #include <vector>
-#include "Fecha.h"
-#include "Hora.h"
+#include <memory>
 #include "Prenda.h"
+#include "Pantalon.h"
+#include "Camisa.h"
 
 using namespace std;
 
+static int numeroDeIdentificacion = 000;
+
 namespace Modelo
 {
-	class Fecha;
-	class Hora;
 	class Prenda;
+	class Camisa;
+	class Pantalon;
 
 	class Cotizacion
 	{
 	private:
-		int numeroDeIdentificacion;
-		Fecha* fechaCotizacion;
-		Hora* horaCotizacion;
 		int codigoDeVendedor;
-		Prenda* prendaCotizada;
+		int numIdentificacion;
+		shared_ptr<Pantalon> pantalonCotizado;
+		shared_ptr<Camisa> camisaCotizada;
 		int unidadesCotizadas;
 		float resultadoCalculoCotizacion;
+		string fechaCotizacion;
+		string tipoDeItem;
 	public:
-		Cotizacion(int, Fecha*, Hora*, int, Prenda*, int);
+		
+		Cotizacion(int, shared_ptr<Pantalon>, int, string);
+		Cotizacion(int, shared_ptr<Camisa>, int, string);
 		virtual ~Cotizacion();
 		int getNumeroDeIdentificacion();
-		Fecha getFechaCotizacion();
-		Hora getHoraCotizacion();
+		string getFechaCotizacion();
 		int getCodigoDeVendedor();
-		Prenda getPrendaCotizada();
 		int getUnidadesCotizadas();
-		float getResultadoCalculoCotizacion();
+		shared_ptr<Pantalon> getPantalonCotizado();
+		shared_ptr<Camisa> getCamisaCotizada();
+		float getResultadoCalculoCotizacionPantalones();
+		float getResultadoCalculoCotizacionCamisas();
+		string getTipoDeItem();
 	};
 }
 

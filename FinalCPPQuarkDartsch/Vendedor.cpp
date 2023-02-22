@@ -35,17 +35,28 @@ namespace Modelo
 		return cotizaciones;
 	}
 
-	void Vendedor::createCotizacion(int numeroDeIdentificacion,
-		Fecha* fechaCotizacion, Hora* horaCotizacion,
-		Prenda* prendaCotizada, int unidadesCotizadas)
+	void Vendedor::createCotizacionPantalon(int numeroDeIdentificacion,
+		string fechaCotizacion,
+		shared_ptr<Pantalon> prendaCotizada, int unidadesCotizadas)
 	{
-		Cotizacion *nuevaCotizacion = new Cotizacion(
-												numeroDeIdentificacion, 
-												fechaCotizacion, 
-												horaCotizacion,
-												codigoDeVendedor,
-												prendaCotizada,
-												unidadesCotizadas);
+		shared_ptr<Cotizacion> nuevaCotizacion = make_shared<Cotizacion>(
+			numeroDeIdentificacion, 
+			prendaCotizada,
+			unidadesCotizadas,
+			fechaCotizacion);
+
+		cotizaciones.push_back(*nuevaCotizacion);
+	}
+
+	void Vendedor::createCotizacionCamisa(int numeroDeIdentificacion,
+		string fechaCotizacion,
+		shared_ptr<Camisa> prendaCotizada, int unidadesCotizadas)
+	{
+		shared_ptr<Cotizacion> nuevaCotizacion = make_shared<Cotizacion>(
+			numeroDeIdentificacion,
+			prendaCotizada,
+			unidadesCotizadas,
+			fechaCotizacion);
 
 		cotizaciones.push_back(*nuevaCotizacion);
 	}

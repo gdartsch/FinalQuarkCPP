@@ -2,17 +2,30 @@
 
 namespace Modelo
 {
-	Cotizacion::Cotizacion(int numeroDeIdentificacion, 
-		Fecha* fechaCotizacion, Hora* horaCotizacion, int codigoDeVendedor,
-		Prenda* prendaCotizada, int unidadesCotizadas)
+	Cotizacion::Cotizacion(int codigoDeVendedor,
+		shared_ptr<Pantalon> pantalonCotizado, int unidadesCotizadas, string fechaCotizacion)
 	{
-		this->numeroDeIdentificacion = numeroDeIdentificacion;
+		numeroDeIdentificacion++;
+		this->numIdentificacion = numeroDeIdentificacion;
 		this->fechaCotizacion = fechaCotizacion;
-		this->horaCotizacion = horaCotizacion;
 		this->codigoDeVendedor = codigoDeVendedor;
-		this->prendaCotizada = prendaCotizada;
+		this->pantalonCotizado = pantalonCotizado;
 		this->unidadesCotizadas = unidadesCotizadas;
 		this->resultadoCalculoCotizacion = 0.0f;
+		this->tipoDeItem = "Pantalon";
+	}
+
+	Cotizacion::Cotizacion(int codigoDeVendedor,
+		shared_ptr<Camisa> camisaCotizada, int unidadesCotizadas, string fechaCotizacion)
+	{
+		numeroDeIdentificacion++;
+		this->numIdentificacion = numeroDeIdentificacion;
+		this->fechaCotizacion = fechaCotizacion;
+		this->codigoDeVendedor = codigoDeVendedor;
+		this->camisaCotizada = camisaCotizada;
+		this->unidadesCotizadas = unidadesCotizadas;
+		this->resultadoCalculoCotizacion = 0.0f;
+		this->tipoDeItem = "Camisa";
 	}
 
 	Cotizacion::~Cotizacion()
@@ -22,17 +35,12 @@ namespace Modelo
 
 	int Cotizacion::getNumeroDeIdentificacion()
 	{
-		return numeroDeIdentificacion;
+		return numIdentificacion;
 	}
 
-	Fecha Cotizacion::getFechaCotizacion()
+	string Cotizacion::getFechaCotizacion()
 	{
-		return *fechaCotizacion;
-	}
-
-	Hora Cotizacion::getHoraCotizacion()
-	{
-		return *horaCotizacion;
+		return fechaCotizacion;
 	}
 
 	int Cotizacion::getCodigoDeVendedor()
@@ -40,18 +48,33 @@ namespace Modelo
 		return codigoDeVendedor;
 	}
 
-	Prenda Cotizacion::getPrendaCotizada()
-	{
-		return *prendaCotizada;
-	}
-
 	int Cotizacion::getUnidadesCotizadas()
 	{
 		return unidadesCotizadas;
 	}
 
-	float Cotizacion::getResultadoCalculoCotizacion()
+	float Cotizacion::getResultadoCalculoCotizacionPantalones()
 	{
-		return this->prendaCotizada->getPrecio() * unidadesCotizadas;
+		return this->pantalonCotizado->getPrecio() * unidadesCotizadas;
+	}
+
+	float Cotizacion::getResultadoCalculoCotizacionCamisas()
+	{
+		return this->camisaCotizada->getPrecio() * unidadesCotizadas;
+	}
+
+	shared_ptr<Pantalon> Cotizacion::getPantalonCotizado()
+	{
+		return pantalonCotizado;
+	}
+
+	shared_ptr<Camisa> Cotizacion::getCamisaCotizada() 
+	{
+		return camisaCotizada;
+	}
+
+	string Cotizacion::getTipoDeItem()
+	{
+		return tipoDeItem;
 	}
 }

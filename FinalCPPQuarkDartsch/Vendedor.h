@@ -4,8 +4,6 @@
 #include <vector>
 #include <memory>
 #include "Cotizacion.h"
-#include "Hora.h"
-#include "Fecha.h"
 #include "Prenda.h"
 #include "Tienda.h"
 
@@ -26,7 +24,6 @@ namespace Modelo
 		 string apellido;
 		 int codigoDeVendedor;
 		 vector<Cotizacion> cotizaciones;
-		 //Tienda* tienda;
 		 shared_ptr<Tienda> tienda;
 	public:
 		Vendedor(string, string, int, shared_ptr<Tienda>);
@@ -35,7 +32,8 @@ namespace Modelo
 		string getApellido();
 		int getCodigoVendedor();
 		vector<Cotizacion> getCotizaciones();
-		void createCotizacion(int, Fecha*, Hora*, Prenda*, int);
+		void createCotizacionPantalon(int, string, shared_ptr<Pantalon>, int);
+		void createCotizacionCamisa(int, string, shared_ptr<Camisa>, int);
 		shared_ptr<Tienda> getTienda();
 	};
 }
