@@ -102,5 +102,5 @@ void Vista::mostrarHistorialCotizaciones()
 
 void Vista::procesoDeCotizacion()
 {
-	presentador.get()->cotizarCamisa();
+	presentador.get()->procesoCotizacion();
 }

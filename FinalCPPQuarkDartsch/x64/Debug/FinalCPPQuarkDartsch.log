@@ -1,4 +1,7 @@
-﻿  Presentador.cpp
+﻿  Camisa.cpp
+  Presentador.cpp
+C:\Users\choco\Desktop\FinalCPPQuarkDartsch\FinalCPPQuarkDartsch\Presentador.cpp(520,33): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\choco\Desktop\FinalCPPQuarkDartsch\FinalCPPQuarkDartsch\Presentador.cpp(526,31): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\xutility(149,77): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\memory(2003): message : see reference to function template instantiation 'void std::_Construct_in_place<_Ty,double&,Modelo::Prenda::Calidad&,int&,Modelo::Pantalon::Tipo&>(_Ty &,double &,Modelo::Prenda::Calidad &,int &,Modelo::Pantalon::Tipo &) noexcept(false)' being compiled
           with
@@ -16,4 +19,5 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.3070
               _Ty=Modelo::Pantalon
           ]
 C:\Users\choco\Desktop\FinalCPPQuarkDartsch\FinalCPPQuarkDartsch\Presentador.cpp(519): message : see reference to function template instantiation 'std::shared_ptr<Modelo::Pantalon> std::make_shared<Modelo::Pantalon,double&,Modelo::Prenda::Calidad&,int&,Modelo::Pantalon::Tipo&>(double &,Modelo::Prenda::Calidad &,int &,Modelo::Pantalon::Tipo &)' being compiled
+  Generating Code...
   FinalCPPQuarkDartsch.vcxproj -> C:\Users\choco\Desktop\FinalCPPQuarkDartsch\FinalCPPQuarkDartsch\x64\Debug\FinalCPPQuarkDartsch.exe

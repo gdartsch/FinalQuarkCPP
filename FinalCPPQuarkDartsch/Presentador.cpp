@@ -132,10 +132,11 @@ void Presentador::setup()
 	vendedor.get()->getTienda().get()->addPantalon(pantalonComunPremium);		
 }
 
-void Presentador::cotizarCamisa()
+void Presentador::procesoCotizacion()
 {
 	bool error = false;
 	string input;
+
 	string tipo;
 	Modelo::Camisa::Manga _manga = Modelo::Camisa::Manga::corta;
 	Modelo::Camisa::Cuello _cuello = Modelo::Camisa::Cuello::comun;
@@ -214,7 +215,6 @@ void Presentador::cotizarCamisa()
 					}
 					else if (input == "3")
 					{
-						//break;
 						vista.get()->pantallaPrincipal();
 						return;
 					}
@@ -517,13 +517,13 @@ void Presentador::cotizarCamisa()
 		if (tipo == "Pantalon")
 		{
 			shared_ptr<Modelo::Pantalon> newPantalon = make_shared<Modelo::Pantalon>(_precioUnitario, _calidad, _cantidad, _tipo);
-
+			newPantalon.get()->setPrecio(_precioUnitario);
 			vendedor.get()->createCotizacionPantalon(vendedor.get()->getCodigoVendedor(), fechaYhora, newPantalon, _cantidad);
 		}
 		else
 		{
 			shared_ptr<Modelo::Camisa> newCamisa = make_shared<Modelo::Camisa>(_precioUnitario, _calidad, _cantidad, _manga, _cuello);
-
+			newCamisa.get()->setPrecio(_precioUnitario);
 			vendedor.get()->createCotizacionCamisa(vendedor.get()->getCodigoVendedor(), fechaYhora, newCamisa, _cantidad);
 		}
 

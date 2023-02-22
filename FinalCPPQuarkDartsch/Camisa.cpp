@@ -1,5 +1,6 @@
 #include "Camisa.h"
 #include <string>
+#include <iostream>
 
 using namespace std;
 
@@ -16,6 +17,9 @@ namespace Modelo
 		this->precioUnitario = manga == Camisa::Manga::larga ? precioUnitario : precioUnitario - (precioUnitario * 0.1f);
 		this->precioUnitario = cuello == Camisa::Cuello::comun ? precioUnitario : precioUnitario * 1.03f;
 		this->precioUnitario = calidad == Prenda::Calidad::standard ? precioUnitario : precioUnitario * 1.3f;
+		/*std::cout << precioUnitario;
+		string coso;
+		cin >> coso;*/
 	}
 
 	Camisa::~Camisa()

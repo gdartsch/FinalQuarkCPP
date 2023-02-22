@@ -18,7 +18,7 @@ public:
 	Presentador();
 	~Presentador();
 	void setup();
-	void cotizarCamisa();
+	void procesoCotizacion();
 	void cotizarPantalon();
 	void mostrarCotizaciones();
 	void mostrarDebug();
